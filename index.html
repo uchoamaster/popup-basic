@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>popup jquerysuperbox</title>
+	<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- Magnific Popup core JS file -->
+<script src="magnific-popup/jquery.magnific-popup.js"></script>
+</head>
+<body>
+
+<a class="test-popup-link" href="img/popup.jpeg">Open popup</a>
+
+<!-- <script>
+$(document).ready(function() {
+  $('.image-link').magnificPopup({type:'image'});
+});
+</script> -->
+<script>
+	$('.test-popup-link').magnificPopup({
+  type: 'image'
+  // other options
+});
+</script>
+<?php
+			$situacao_usuario = "pendente";
+			if($situacao_usuario == "pendente"){ ?>
+				<script>
+					$(document).ready(function(){
+						$('.test-popup-link').modal('show');
+					});
+				</script>
+			<?php } ?>
+</body>
+</html>
